@@ -5,15 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login & Registration</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="hero">
         <div class="form-box">
             <div class="button-box">
-                
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
+            <div class="social-icons">
+                <img src="/images/fb.png" alt="Fb">
+                <img src="/images/tw.png" alt="Twitter">
+                <img src="/images/gp.png" alt="Google">
+            </div>
+
+            <form id="login" class="input-group">
+                <input type="text" id="user_id" class="input-field" placeholder="User ID" required>
+                <input type="password" class="input-field" placeholder="Enter password" required>
+                <input type="checkbox" name="checkbox" class="check-box">
+                <label for="checkbox">Remember Me</label>
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-field" placeholder="User ID" required>
+                <input type="email" class="input-field" placeholder="Email ID" required>
+                <input type="password" class="input-field" placeholder="Enter password" required>
+                <input type="checkbox" name="checkbox" class="check-box">
+                <label for="checkbox">I agree with the Terms and Conditions</label>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
